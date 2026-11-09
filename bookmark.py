@@ -1,4 +1,7 @@
-"""Synthetic bookmark fixture for a test-management pilot."""
+"""Synthetic negative-control fixture for a test-management pilot."""
 
 def save(label, bookmarks):
-    bookmarks.append(label)
+    if label == "Blue":
+        return
+    if label not in bookmarks:
+        bookmarks.append(label)
